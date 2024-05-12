@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark">
+    <title>quick</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0%;
+            padding: 0%;
+            & ul{
+                list-style: none;
+                & a{
+                    text-decoration: none;
+                    color: white;
+                }
+            }
+        }
+        .menu-box{
+            height: 70px;
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+
+        }
+        header{
+            /* border-bottom: 3px solid #000; */
+            background-color: #2c3e50;
+            
+            & h2{
+                text-align: center;
+                font-size: 40px;
+                padding: 15px;
+                color: transparent;
+                background: linear-gradient(to right, #ada996, #f2f2f2, #dbdbdb, #eaeaea);
+                background-clip: text;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+                & span{
+                    color: transparent;
+                    background: linear-gradient(to right, #1488cc, #3498db, #1488cc);
+                    background-clip: text;
+                    font-size: 48px;
+                }
+            }
+        }
+        .menu{
+            list-style: none;
+            display: flex;
+            flex-flow: row wrap;
+            width: 1400px;
+            padding: 0%;
+            margin: 0% auto;
+            position: relative;
+
+            & li{
+                flex: 1 1 125.30px;
+                text-align: center;
+                /* flex-basis: 127px; */
+                
+
+                /* &:first-child{
+                    margin-left: auto;
+                }
+                &:last-child{
+                    margin-right: auto;
+                } */
+                
+                & a{
+                    text-decoration: none;
+                    
+                    color: white;
+                    display: block;
+                    padding: 15px;
+                    font-family: century;
+                    font-size: 16px;
+                }
+            }
+        }
+        .contain{
+            display: flex;
+            flex-flow: row wrap;
+            width: 1400px;
+            /* border: 1px solid #000; */
+            position: absolute;
+            top: 100%;
+            left: 0%;
+            margin: 0%;
+            z-index: 100;
+            opacity: 0;
+            transition: opacity 0.2s linear 0.3s;
+        }
+        .items{
+            font: 600 15px arial;
+            padding: 10px 15px;
+            /* flex-basis: 200px; */
+            flex-grow: 1;
+            background-color: #2c3e50 !important;
+            color: silver;
+            line-height: 15px;
+
+            /* & > a{
+                background-color: white;
+                color: #000;
+                padding:15px 10px 10px 10px;
+                display: block;
+                text-align: center;
+            } */
+
+            & ul > li{
+                width: 100%;
+                /* text-align: left; */
+
+                & a{
+                    padding:10px;
+                    display: block;
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                    font-style: normal;
+                    font-size: 14px;
+
+                }
+                &:first-child a{
+                    background-color: rgb(255, 255, 255);
+                    color: #000000;
+                    height: 50px;
+                    padding: 10px;
+                    font-size: 15px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                &:nth-child(2){
+                    padding:15px 10px 10px 10px;
+                }
+                &:last-child a{
+                    padding:10px 10px 30px 10px;
+                }
+                /* &:hover:first-child a{
+                    background-color: #27ae60;
+                } */
+            }
+            &:hover ul > li:first-child a{
+                background-color: #27ae60;
+                color: white;
+            }
+        }
+        /* .Christmas-container, .Offers-container , .Kitchen-container , .Bath-container , .Painting-container , .Building-container , .Lighting-container , .Heating-container , .Garden-container , .Tiling-container , .Tools-container li{
+            display: none;
+        } */
+        .contain li{
+            display: none;
+        }
+        .p{
+            /* position: relative; */
+            box-sizing: border-box;
+            & p{
+                color: transparent;
+                font-size: 70px;
+                /* background: #7d6c6c; */
+                position: absolute;
+                inset: 45% 41% 25% 38%;
+                text-align: center;
+                font-weight: 900;
+                background: linear-gradient(40deg, #3c40c6, #57ef94, #4bcffa,#ffd32a, #00d8d6, #0be881, #e2f53b, #1ae0e0, #4bcffa, #05c46b);
+                background-clip: text;
+
+            }
+            & img{
+                width: 99vw;
+                height: 80vh;
+                object-fit: cover;
+
+            }
+            
+        }
+        .menu > li:hover > .contain{
+            opacity: 1;
+            /* height: 650px; */
+            & li{
+                display: block;
+            }
+        }
+        .Tiling-container{
+
+            .item3{
+                flex-grow: 2;
+            }
+        }
+        .menu-box ul li:hover > a{
+            background-color: #27ae60;
+        }
+        /* .contain{
+            .items{
+                &:hover ul > li:first-child a{
+                    background-color: #27ae60;
+                }
+            }
+        } */
+    </style>
+</head>
+<body>
+    <header>
+        <h2><span>Duckpool Gaming</span><br>Dropdown Menu Using Flex</h2>
+    </header>
+    <div class="menu-box">
+    <ul class="menu">
+        <li>
+            <a href="#">Christmas <br> Decoration</a>
+            <ul class="Christmas-container contain">
+                <li class="items item1">
+                    <!-- <a href="">Pull Me</a> -->
+                    <ul>
+                        <li><a href="#">Christmas trees</a></li>
+                        <li><a href="#">Artificial Christmas trees</a></li>
+                        <li><a href="#">Real Christmas trees</a></li>
+                        <li><a href="#">Pre-lit Christmas trees</a></li>
+                        <li><a href="#">7ft Christmas trees</a></li>
+                        <li><a href="#">6ft Christmas trees</a></li>
+                        <li><a href="#">Christmas tree stands</a></li>
+                        <li><a href="#">Slim Christmas trees</a></li>
+                        <li><a href="#">Snowy Christmas trees</a></li>
+                        <li><a href="#">White Christmas trees</a></li>
+                    </ul>
+                </li>
+                <li class="items item2">
+                    <!-- <a href="">Pull Me</a> -->
+                    <ul>
+                        <li><a href="#">Christmas decorations</a></li>
+                        <li><a href="#">Christmas tree decorations</a></li>
+                        <li><a href="#">Wreaths and garlands</a></li>
+                        <li><a href="#">Christmas baubles</a></li>
+                        <li><a href="#">Christmas inflatables</a></li>
+                        <li><a href="#">Christmas tree arches</a></li>
+                        <li><a href="#">Christmas tree skirts</a></li>
+                        <li><a href="#">Christmas tree toppers</a></li>
+                        <li><a href="#">Christmas stockings & sacks</a></li>
+                    </ul>
+                </li>
+                <li class="items item3">
+                    <!-- <a href="">Pull Me</a> -->
+                    <ul>
+                        <li><a href="#">Christmas lights</a></li>
+                        <li><a href="#">Outdoor Christmas lights</a></li>
+                        <li><a href="#">Christmas tree lights</a></li>
+                        <li><a href="#">Christmas silhouettes</a></li>
+                        <li><a href="#">Battery-powered lights</a></li>
+                        <li><a href="#">White Christmas lights</a></li>
+                    </ul>
+                </li>
+                <li class="items item4">
+                    <!-- <a href="">Pull Me</a> -->
+                    <ul>
+                        <li><a href="#">Christmas fun & gifting</a></li>
+                        <li><a href="#">Christmas gift guide</a></li>
+                        <li><a href="#">Gift wrapping</a></li>
+                        <li><a href="#">Christmas toys</a></li>
+                        <li><a href="#">Christmas novelty</a></li>
+                        <li><a href="#">Advent calendars</a></li>
+                    </ul>
+                </li>
+                <li class="items item5">
+                    <!-- <a href="">Pull Me</a> -->
+                    <ul>
+                        <li><a href="#">Christmas home</a></li>
+                        <li><a href="#">Cooking & dining</a></li>
+                        <li><a href="#">Christmas table decorations</a></li>
+                        <li><a href="#">Throws & blankets</a></li>
+                        <li><a href="#">Christmas cushions</a></li>
+                        <li><a href="#">Christmas bedding</a></li>
+                        <li><a href="#">Candles</a></li>
+                        <li><a href="#">Christmas candle holders</a></li>
+                        <li><a href="#">Christmas doormats</a></li>
+                        <li><a href="#">Houseplants</a></li>
+                        <li><a href="#">Christmas storage</a></li>
+                    </ul>
+                </li>
+                <li class="items item6">
+                    <!-- <a href="">Pull Me</a> -->
+                    <ul>
+                        <li><a href="#">Christmas inspiration</a></li>
+                        <li><a href="#">Christmas trends for 2023</a></li>
+                        <li><a href="#">Layered greens collection</a></li>
+                        <li><a href="#">Refined classics collection</a></li>
+                        <li><a href="#">Historical twist collection</a></li>
+                        <li><a href="#">Shadow play collection</a></li>
+                        <li><a href="#">Instant Christmas makeover</a></li>
+                        <li><a href="#">Hanging your Christmas lights</a></li>
+                        <li><a href="#">Artificial Christmas tree guide</a></li>
+                        <li><a href="#">Real Christmas tree care</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">Offers & <br> Clearance</a>
+            <ul class="Offers-container contain">
+                <li class="items item1">
+                    <ul>
+                        <li><a href="#">Offers</a></li>
+                        <li><a href="#">Offers of the week</a></li>
+                        <li><a href="#">More great offers</a></li>
+                    </ul>
+                </li>
+                <li class="items item2">
+                    <ul>
+                        <li><a href="#">Home & garden <br> clearance</a></li>
+                        <li><a href="#">Flooring</a></li>
+                        <li><a href="#">Wallpaper</a></li>
+                        <li><a href="#">Outdoor & garden</a></li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Kitchen</a></li>
+                        <li><a href="#">Bedroom & storage</a></li>
+                        <li><a href="#">Bathroom</a></li>
+                        <li><a href="#">Lighting</a></li>
+                        <li><a href="#">Paint</a></li>
+                        <li><a href="#">Tiling</a></li>
+                        <li><a href="#">Sport & Leisure</a></li>
+                    </ul>
+                </li>
+                <li class="items item3">
+                    <ul>
+                        <li><a href="#">DIY & building clearance</a></li>
+                        <li><a href="#">Tools</a></li>
+                        <li><a href="#">Building & hardware</a></li>
+                        <li><a href="#">Heating & cooling</a></li>
+                        <li><a href="#">Electrical & security</a></li>
+                        <li><a href="#">Plumbing</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">Kitchen & <br> Appliances</a>
+            <ul class="Kitchen-container contain">
+                <li class="items item1">
+                    <ul>
+                        <li><a href="#">Fitted Kitchens</a></li>
+                        <li><a href="#">Browse ranges</a></li>
+                        <li><a href="#">Book an appointment</a></li>
+                        <li><a href="#">Installation</a></li>
+                        <li><a href="#">Kitchen finance</a></li>
+                        <li><a href="#">Kitchen trends for 2024</a></li>
+                        <li><a href="#">Kitchen ideas & advice</a></li>
+                        <li><a href="#">Open plan kitchen ideas</a></li>
+                        <li><a href="#">Green kitchens</a></li>
+                        <li><a href="#">Blue kitchens</a></li>
+                        <li><a href="#">Grey kitchens</a></li>
+                        <li><a href="#">White kitchens</a></li>
+                        <li><a href="#">Luxury kitchen ideas</a></li>
+                    </ul>
+                </li>
+                <li class="items item2">
+                    <ul>
+                        <li><a href="#">Kitchen cabinets & doors</a></li>
+                        <li><a href="#">Kitchen doors</a></li>
+                        <li><a href="#">Kitchen units</a></li>
+                        <li><a href="#">Complete kitchen units</a></li>
+                        <li><a href="#">Kitchen cabinet storage</a></li>
+                        <li><a href="#">Plinths & panels</a></li>
+                        <li><a href="#">Drawer boxes</a></li>
+                        <li><a href="#">Kitchen storage</a></li>
+                    </ul>
+                </li>
+                <li class="items item3">
+                    <ul>
+                        <li><a href="#">Kitchen worktops</a></li>
+                        <li><a href="#">Laminate worktops</a></li>
+                        <li><a href="#">Solid wood worktops</a></li>
+                        <li><a href="#">Acrylic worktops</a></li>
+                        <li><a href="#">Bespoke Kitchen Worktops</a></li>
+                        <li><a href="#">Kitchen splashbacks</a></li>
+                        <li><a href="#">Kitchen upstands</a></li>
+                        <li><a href="#">Edging & strips</a></li>
+                        <li><a href="#">Worktop installation</a></li>
+                        <li><a href="#">End caps & joints</a></li>
+                    </ul>
+                </li>
+                <li class="items item4">
+                    <ul>
+                        <li><a href="#">Kitchen taps</a></li>
+                        <li><a href="#">Mixer taps</a></li>
+                        <li><a href="#">Boiling water taps</a></li>
+                        <li><a href="#">Filter taps</a></li>
+                        <li><a href="#">Pillar taps</a></li>
+                        <li><a href="#">Black taps</a></li>
+                        <li><a href="#">Silver taps</a></li>
+                        <li><a href="#">Gold taps</a></li>
+                    </ul>
+                </li>
+                <li class="items item5">
+                    <ul>
+                        <li><a href="#">Kitchen sinks</a></li>
+                        <li><a href="#">1 bowl sinks</a></li>
+                        <li><a href="#">1.5 bowl sinks</a></li>
+                        <li><a href="#">2 bowl sinks</a></li>
+                        <li><a href="#">Stainless steel sinks</a></li>
+                        <li><a href="#">Composite sinks</a></li>
+                        <li><a href="#">Ceramic sinks</a></li>
+                        <li><a href="#">Resin sinks</a></li>
+                        <li><a href="#">Undermount sinks</a></li>
+                        <li><a href="#">Black sinks</a></li>
+                        <li><a href="#">Grey sinks</a></li>
+                    </ul>
+                </li>
+                <li class="items item6">
+                    <ul>
+                        <li><a href="#">Kitchen appliances</a></li>
+                        <li><a href="#">Ovens</a></li>
+                        <li><a href="#">Cookers</a></li>
+                        <li><a href="#">Hobs</a></li>
+                        <li><a href="#">Cooker hoods</a></li>
+                        <li><a href="#">Fridges & freezers</a></li>
+                        <li><a href="#">Laundry appliances</a></li>
+                        <li><a href="#">Dishwashers</a></li>
+                        <li><a href="#">Microwaves</a></li>
+                        <li><a href="#">Air fryers</a></li>
+                        <li><a href="#">Slow cookers</a></li>
+                        <li><a href="#">Small appliance sets</a></li>
+                        <li><a href="#">Coffee machines</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">Bathroom & <br> Showers</a>
+            <ul class="Bath-container contain">
+                <li class="items item1">
+                    <ul>
+                        <li><a href="#">Bathroom furniture</a></li>
+                        <li><a href="#">Vanity units</a></li>
+                        <li><a href="#">Bathroom cabinets</a></li>
+                        <li><a href="#">Bathroom suites</a></li>
+                        <li><a href="#">Bathroom storage</a></li>
+                        <li><a href="#">Bathroom mirrors</a></li>
+                        <li><a href="#">Fitted bathroom furniture</a></li>
+                        <li><a href="#">Bathroom accessories</a></li>
+                        <li><a href="#">Bathroom furniture sets</a></li>
+                        <li><a href="#">Bathroom worktops</a></li>
+                    </ul>
+                </li>
+                <li class="items item2">
+                    <ul>
+                        <li><a href="#">Showering</a></li>
+                        <li><a href="#">Enclosures & doors</a></li>
+                        <li><a href="#">Shower trays</a></li>
+                        <li><a href="#">Mixer showers</a></li>
+                        <li><a href="#">Electric showers</a></li>
+                        <li><a href="#">Power showers</a></li>
+                        <li><a href="#">Digital showers</a></li>
+                        <li><a href="#">Shower kits</a></li>
+                        <li><a href="#">Shower heads</a></li>
+                        <li><a href="#">Riser rails</a></li>
+                        <li><a href="#">Shower hoses</a></li>
+                        <li><a href="#">Wet rooms</a></li>
+                    </ul>
+                </li>
+                <li class="items item3">
+                    <ul>
+                        <li><a href="#">Toilets</a></li>
+                        <li><a href="#">Close-coupled toilets</a></li>
+                        <li><a href="#">Back to wall toilets</a></li>
+                        <li><a href="#">Wall hung toilets</a></li>
+                        <li><a href="#">High & low level toilets</a></li>
+                        <li><a href="#">Toilet seats</a></li>
+                        <li><a href="#">Soft close toilet seats</a></li>
+                        <li><a href="#">Bidets</a></li>
+                        <li><a href="#">Toilet brushes</a></li>
+                    </ul>
+                </li>
+                <li class="items item4">
+                    <ul>
+                        <li><a href="#">Baths</a></li>
+                        <li><a href="#">Shower baths</a></li>
+                        <li><a href="#">Freestanding baths</a></li>
+                        <li><a href="#">Straight baths</a></li>
+                        <li><a href="#">Whirlpool baths</a></li>
+                        <li><a href="#">Walk-in baths</a></li>
+                        <li><a href="#">Corner baths</a></li>
+                        <li><a href="#">Bath panels</a></li>
+                        <li><a href="#">Bath screens</a></li>
+                        <li><a href="#">Bath feet</a></li>
+                    </ul>
+                </li>
+                <li class="items item5">
+                    <ul>
+                        <li><a href="#">Basins</a></li>
+                        <li><a href="#">Counter top basins</a></li>
+                        <li><a href="#">Cloakroom basins</a></li>
+                        <li><a href="#">Pedestal basins</a></li>
+                        <li><a href="#">Wall hung basins</a></li>
+                        <li><a href="#">Semi recessed basins</a></li>
+                    </ul>
+                </li>
+                <li class="items item6">
+                    <ul>
+                        <li><a href="#">Bathroom taps</a></li>
+                        <li><a href="#">Basin taps</a></li>
+                        <li><a href="#">Basin mixer taps</a></li>
+                        <li><a href="#">Basin pillar taps</a></li>
+                        <li><a href="#">Bath shower mixer taps</a></li>
+                        <li><a href="#">Bath mixer taps</a></li>
+                        <li><a href="#">Bath taps</a></li>
+                        <li><a href="#">Bath pillar taps</a></li>
+                        <li><a href="#">Freestanding bath taps</a></li>
+                        <li><a href="#">Bathroom tap sets</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">Painting & <br> Decorating</a>
+            <ul class="Painting-container contain">
+                <li class="items item1">
+                    <ul>
+                        <li><a href="#">Interior paint</a></li>
+                        <li><a href="#">Emulsion paint</a></li>
+                        <li><a href="#">Paint mixing</a></li>
+                        <li><a href="#">Metal & wood paint</a></li>
+                        <li><a href="#">Damp & anti-mould paint</a></li>
+                        <li><a href="#">Primers & undercoats</a></li>
+                        <li><a href="#">Furniture paint</a></li>
+                        <li><a href="#">Tile paint</a></li>
+                        <li><a href="#">Radiator paint</a></li>
+                        <li><a href="#">Bathroom & kitchen paint</a></li>
+                        <li><a href="#">Spray paint</a></li>
+                        <li><a href="#">Floor paint</a></li>
+                        <li><a href="#">Paint samples</a></li>
+                    </ul>
+                </li>
+                <li class="items item2">
+                    <ul>
+                        <li><a href="#">Exterior paint</a></li>
+                        <li><a href="#">Metal & wood paint</a></li>
+                        <li><a href="#">Fence & shed paint</a></li>
+                        <li><a href="#">Door paint</a></li>
+                        <li><a href="#">Masonry paint</a></li>
+                        <li><a href="#">Paint mixing</a></li>
+                        <li><a href="#">Decking paint</a></li>
+                    </ul>
+                </li>
+                <li class="items item3">
+                    <ul>
+                        <li><a href="#">Woodcare</a></li>
+                        <li><a href="#">Wood stain</a></li>
+                        <li><a href="#">Wood varnish</a></li>
+                        <li><a href="#">Wood preservatives</a></li>
+                        <li><a href="#">Wood oil</a></li>
+                        <li><a href="#">Wood wax</a></li>
+                        <li><a href="#">Wood polish</a></li>
+                        <li><a href="#">Exterior woodcare</a></li>
+                        <li><a href="#">Interior woodcare</a></li>
+                    </ul>
+                </li>
+                <li class="items item4">
+                    <ul>
+                        <li><a href="#">Dulux</a></li>
+                        <li><a href="#">Lick</a></li>
+                        <li><a href="#">Farrow & Ball</a></li>
+                        <li><a href="#">Valspar paint mixing</a></li>
+                        <li><a href="#">Ronseal</a></li>
+                        <li><a href="#">GoodHome</a></li>
+                        <li><a href="#">Laura Ashley</a></li>
+                        <li><a href="#">Leyland Trade</a></li>
+                        <li><a href="#">Rust-Oleum</a></li>
+                        <li><a href="#">Cuprinol</a></li>
+                        <li><a href="#">Sandtex</a></li>
+                        <li><a href="#">V33</a></li>
+                    </ul>
+                </li>
+                <li class="items item5">
+                    <ul>
+                        <li><a href="#">Paint rollers</a></li>
+                        <li><a href="#">Paint brushes</a></li>
+                        <li><a href="#">Paint trays</a></li>
+                        <li><a href="#">Paint pads</a></li>
+                        <li><a href="#">Paint sprayers</a></li>
+                        <li><a href="#">Dust sheets</a></li>
+                        <li><a href="#">Fillers</a></li>
+                        <li><a href="#">Tapes</a></li>
+                        <li><a href="#">Sandpaper</a></li>
+                        <li><a href="#">Glues & adhesives</a></li>
+                        <li><a href="#">Sealants</a></li>
+                        <li><a href="#">Paint stripper</a></li>
+                    </ul>
+                </li>
+                <li class="items item6">
+                    <ul>
+                        <li><a href="#">Wallpaper</a></li>
+                        <li><a href="#">Murals</a></li>
+                        <li><a href="#">Wall stickers</a></li>
+                        <li><a href="#">Sticky back plastic & window film</a></li>
+                        <li><a href="#">Decorative wall panels</a></li>
+                        <li><a href="#">Blue wallpaper</a></li>
+                        <li><a href="#">Grey wallpaper</a></li>
+                        <li><a href="#">Wallpaper tools</a></li>
+                        <li><a href="#">Lining paper</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">Building & <br> Hardwear</a>
+            <ul class="Building-container contain">
+                <li class="items item1">
+                    <ul>
+                        <li><a href="#">Timber</a></li>
+                        <li><a href="#">Architrave</a></li>
+                        <li><a href="#">Mouldings</a></li>
+                        <li><a href="#">Skirting board</a></li>
+                        <li><a href="#">Cladding</a></li>
+                        <li><a href="#">Wall panelling kits</a></li>
+                        <li><a href="#">Stairs & stair parts</a></li>
+                        <li><a href="#">Handrails</a></li>
+                        <li><a href="#">Loft boards</a></li>
+                        <li><a href="#">Scaffold boards</a></li>
+                        <li><a href="#">Planed timber</a></li>
+                    </ul>
+                </li>
+                <li class="items item2">
+                    <ul>
+                        <li><a href="#">Cements & additives</a></li>
+                        <li><a href="#">Aggregates</a></li>
+                        <li><a href="#">Plastering supplies</a></li>
+                        <li><a href="#">Insulation</a></li>
+                        <li><a href="#">Roofing supplies</a></li>
+                        <li><a href="#">Plasterboard</a></li>
+                        <li><a href="#">Bricks & blocks</a></li>
+                        <li><a href="#">Sealants</a></li>
+                        <li><a href="#">Guttering</a></li>
+                        <li><a href="#">Coving</a></li>
+                        <li><a href="#">Builder's metalwork</a></li>
+                    </ul>
+                </li>
+                <li class="items item3">
+                    <ul>
+                        <li><a href="#">Plywood</a></li>
+                        <li><a href="#">Furniture boards</a></li>
+                        <li><a href="#">MDF</a></li>
+                        <li><a href="#">OSB</a></li>
+                        <li><a href="#">Hardboard</a></li>
+                        <li><a href="#">Chipboard</a></li>
+                    </ul>
+                </li>
+                <li class="items item4">
+                    <ul>
+                        <li><a href="#">Screws</a></li>
+                        <li><a href="#">Handles & knobs</a></li>
+                        <li><a href="#">Hinges</a></li>
+                        <li><a href="#">Fixings & wall plugs</a></li>
+                        <li><a href="#">Hooks</a></li>
+                        <li><a href="#">Nails</a></li>
+                        <li><a href="#">Brackets</a></li>
+                        <li><a href="#">Locks & padlocks</a></li>
+                        <li><a href="#">Furniture legs</a></li>
+                        <li><a href="#">Wardrobe rails & fittings</a></li>
+                        <li><a href="#">Bolts, nuts & washers</a></li>
+                    </ul>
+                </li>
+                <li class="items item5">
+                    <ul>
+                        <li><a href="#">Internal doors</a></li>
+                        <li><a href="#">External doors</a></li>
+                        <li><a href="#">Door locks & latches</a></li>
+                        <li><a href="#">Door canopies</a></li>
+                        <li><a href="#">Windows</a></li>
+                        <li><a href="#">Loft hatches</a></li>
+                        <li><a href="#">Garage doors</a></li>
+                        <li><a href="#">Door furniture</a></li>
+                        <li><a href="#">Door frames & fittings</a></li>
+                        <li><a href="#">Window furniture</a></li>
+                        <li><a href="#">Window fittings</a></li>
+                      </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">Lighting & <br> Electrical</a>
+            <ul class="Lighting-container contain">
+                <li class="items item1">
+                    <ul>
+                        <li><a href="#">Ceiling lights</a></li>
+                        <li><a href="#">Floor lamps</a></li>
+                        <li><a href="#">Light bulbs</a></li>
+                        <li><a href="#">Table lamps</a></li>
+                        <li><a href="#">Chandeliers</a></li>
+                        <li><a href="#">Light shades</a></li>
+                        <li><a href="#">Wall lights</a></li>
+                        <li><a href="#">Spotlights & downlights</a></li>
+                        <li><a href="#">Pendant lights</a></li>
+                        <li><a href="#">Light fixtures & fittings</a></li>
+                        <li><a href="#">Christmas lights</a></li>
+                    </ul>
+                </li>
+                <li class="items item2">
+                    <ul>
+                        <li><a href="#">Wall lights</a></li>
+                        <li><a href="#">Security lights</a></li>
+                        <li><a href="#">String lights</a></li>
+                        <li><a href="#">Lanterns</a></li>
+                        <li><a href="#">Post lights</a></li>
+                        <li><a href="#">Spike lights</a></li>
+                        <li><a href="#">Decking lights</a></li>
+                        <li><a href="#">Solar security lights</a></li>
+                        <li><a href="#">Sensor wall lights</a></li>
+                        <li><a href="#">Solar wall lights</a></li>
+                        <li><a href="#">Solar string lights</a></li>
+                        <li><a href="#">Outdoor Christmas lights</a></li>
+                    </ul>
+                </li>
+                <li class="items item3">
+                    <ul>
+                        <li><a href="#">All LED lights</a></li>
+                        <li><a href="#">LED ceiling lights</a></li>
+                        <li><a href="#">LED light bulbs</a></li>
+                        <li><a href="#">Indoor LED wall lights</a></li>
+                        <li><a href="#">LED floor lamps</a></li>
+                        <li><a href="#">LED spotlights</a></li>
+                        <li><a href="#">LED string lights</a></li>
+                        <li><a href="#">Outdoor LED wall lights</a></li>
+                        <li><a href="#">LED security lights</a></li>
+                        <li><a href="#">LED table lamps</a></li>
+                        <li><a href="#">LED decking lights</a></li>
+                        <li><a href="#">LED ground lights</a></li>
+                    </ul>
+                </li>
+                <li class="items item4">
+                    <ul>
+                        <li><a href="#">Switches & sockets</a></li>
+                        <li><a href="#">Extension leads</a></li>
+                        <li><a href="#">Wiring</a></li>
+                        <li><a href="#">Cable management</a></li>
+                        <li><a href="#">Batteries</a></li>
+                        <li><a href="#">Plug timers</a></li>
+                        <li><a href="#">Doorbells</a></li>
+                        <li><a href="#">TV aerials</a></li>
+                        <li><a href="#">Junction boxes</a></li>
+                        <li><a href="#">Consumer units</a></li>
+                        <li><a href="#">Networking & Wi-Fi</a></li>
+                        <li><a href="#">Electrician's tools</a></li>
+                    </ul>
+                </li>
+                <li class="items item5">
+                    <ul>
+                        <li><a href="#">Security cameras</a></li>
+                        <li><a href="#">Burglar alarms</a></li>
+                        <li><a href="#">Smoke alarms</a></li>
+                        <li><a href="#">Carbon monoxide alarms</a></li>
+                        <li><a href="#">Door locks</a></li>
+                        <li><a href="#">Safes</a></li>
+                        <li><a href="#">Key cabinets</a></li>
+                        <li><a href="#">Bicycle locks</a></li>
+                        <li><a href="#">Fire safety</a></li>
+                        <li><a href="#">Padlocks</a></li>
+                        <li><a href="#">Safety signs</a></li>
+                    </ul>
+                </li>
+                <li class="items item6">
+                    <ul>
+                        <li><a href="#">Smart light bulbs</a></li>
+                        <li><a href="#">Smart burglar alarms</a></li>
+                        <li><a href="#">Smart security cameras</a></li>
+                        <li><a href="#">Smart thermostats</a></li>
+                        <li><a href="#">Smart locks & padlocks</a></li>
+                        <li><a href="#">Smart doorbells</a></li>
+                        <li><a href="#">Smart plug adaptors</a></li>
+                        <li><a href="#">Smart sockets</a></li>
+                        <li><a href="#">Smart heaters</a></li>
+                        <li><a href="#">Smart indoor lighting</a></li>
+                        <li><a href="#">Smart radiator valves</a></li>
+                        <li><a href="#">Smart showers</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">Heating & <br> Plumbing</a>
+            <ul class="Heating-container contain">
+                <li class="items item1">
+                    <ul>
+                        <li><a href="#">Double panel radiators</a></li>
+                        <li><a href="#">Towel radiators</a></li>
+                        <li><a href="#">Column radiators</a></li>
+                        <li><a href="#">Designer radiators</a></li>
+                        <li><a href="#">Oil filled radiators</a></li>
+                        <li><a href="#">Vertical radiators</a></li>
+                        <li><a href="#">Radiator valves</a></li>
+                        <li><a href="#">Radiator covers</a></li>
+                        <li><a href="#">Cast iron radiators</a></li>
+                        <li><a href="#">Single panel radiators</a></li>
+                    </ul>
+                </li>
+                <li class="items item2">
+                    <ul>
+                        <li><a href="#">Electric fires</a></li>
+                        <li><a href="#">Stoves</a></li>
+                        <li><a href="#">Fireplace suites</a></li>
+                        <li><a href="#">All heaters</a></li>
+                        <li><a href="#">Gas fires</a></li>
+                        <li><a href="#">Fire surrounds</a></li>
+                        <li><a href="#">Logs</a></li>
+                        <li><a href="#">All fires</a></li>
+                        <li><a href="#">Inset fires</a></li>
+                        <li><a href="#">Halogen heaters</a></li>
+                        <li><a href="#">Gas bottle refills</a></li>
+                        <li><a href="#">Charcoal</a></li>
+                    </ul>
+                </li>
+                <li class="items item3">
+                    <ul>
+                        <li><a href="#">Pipe fittings</a></li>
+                        <li><a href="#">Wastes & traps</a></li>
+                        <li><a href="#">Pipes</a></li>
+                        <li><a href="#">Bathroom fittings</a></li>
+                        <li><a href="#">Valves</a></li>
+                        <li><a href="#">Pipe connectors</a></li>
+                        <li><a href="#">Plumbing tools</a></li>
+                        <li><a href="#">Elbows</a></li>
+                        <li><a href="#">Pipe insulation</a></li>
+                        <li><a href="#">Hose clips</a></li>
+                        <li><a href="#">Taps</a></li>
+                    </ul>
+                </li>
+                <li class="items item4">
+                    <ul>
+                        <li><a href="#">Thermostats</a></li>
+                        <li><a href="#">Underfloor heating</a></li>
+                        <li><a href="#">Water heaters</a></li>
+                        <li><a href="#">Heating treatments</a></li>
+                        <li><a href="#">Boilers</a></li>
+                        <li><a href="#">Radiator covers</a></li>
+                        <li><a href="#">Radiator accessories</a></li>
+                        <li><a href="#">Radiator valves</a></li>
+                        <li><a href="#">Central heating pumps</a></li>
+                    </ul>
+                </li>
+                <li class="items item5">
+                    <ul>
+                        <li><a href="#">Dehumidifiers</a></li>
+                        <li><a href="#">Vents</a></li>
+                        <li><a href="#">Humidifiers</a></li>
+                        <li><a href="#">Fans</a></li>
+                        <li><a href="#">Air conditioners</a></li>
+                        <li><a href="#">Ceiling fans</a></li>
+                        <li><a href="#">Extractor fans</a></li>
+                        <li><a href="#">Ducting</a></li>
+                        <li><a href="#">Air purifiers</a></li>
+                        <li><a href="#">Air quality sensors</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">Garden & <br> Landscaping</a>
+            <ul class="Garden-container contain">
+                <li class="items item1">
+                    <ul>
+                        <li><a href="#">Plants, seeds & bulbs</a></li>
+                        <li><a href="#">Pots, planters & baskets</a></li>
+                        <li><a href="#">Compost & soil improvers</a></li>
+                        <li><a href="#">Weed killers</a></li>
+                        <li><a href="#">Lawn care</a></li>
+                        <li><a href="#">Plant protection & support</a></li>
+                        <li><a href="#">Fertilizers & plant food</a></li>
+                        <li><a href="#">Pest control</a></li>
+                        <li><a href="#">Plant trays</a></li>
+                        <li><a href="#">Propagators</a></li>
+                        <li><a href="#">Watering</a></li>
+                        <li><a href="#">Garden cloches</a></li>
+                    </ul>
+                </li>
+                <li class="items item2">
+                    <ul>
+                        <li><a href="#">Garden power tools</a></li>
+                        <li><a href="#">Lawnmowers</a></li>
+                        <li><a href="#">Garden hand tools</a></li>
+                        <li><a href="#">Hoses & hose reels</a></li>
+                        <li><a href="#">Pressure washers</a></li>
+                        <li><a href="#">Shovels & spades</a></li>
+                        <li><a href="#">Wheelbarrows & trolleys</a></li>
+                        <li><a href="#">Garden waste bags & sacks</a></li>
+                        <li><a href="#">Composters</a></li>
+                        <li><a href="#">Watering cans</a></li>
+                        <li><a href="#">Incinerators</a></li>
+                        <li><a href="#">Gardening gloves</a></li>
+                    </ul>
+                </li>
+                <li class="items item3">
+                    <ul>
+                        <li><a href="#">Sheds</a></li>
+                        <li><a href="#">Garden storage</a></li>
+                        <li><a href="#">Summerhouses</a></li>
+                        <li><a href="#">Pergolas</a></li>
+                        <li><a href="#">Greenhouses</a></li>
+                        <li><a href="#">Log cabins</a></li>
+                        <li><a href="#">Shed bases</a></li>
+                        <li><a href="#">Garden arbours</a></li>
+                        <li><a href="#">Garden arches</a></li>
+                        <li><a href="#">Awnings</a></li>
+                        <li><a href="#">Workshops</a></li>
+                        <li><a href="#">Growhouses</a></li>
+                    </ul>
+                </li>
+                <li class="items item4">
+                    <ul>
+                        <li><a href="#">Fencing</a></li>
+                        <li><a href="#">Paving & walling</a></li>
+                        <li><a href="#">Stones & chippings</a></li>
+                        <li><a href="#">Decking</a></li>
+                        <li><a href="#">Lawn edging</a></li>
+                        <li><a href="#">Garden trellis & screening</a></li>
+                        <li><a href="#">Garden gates</a></li>
+                        <li><a href="#">Weed control fabric</a></li>
+                        <li><a href="#">Artificial grass</a></li>
+                        <li><a href="#">Lawn turf</a></li>
+                        <li><a href="#">Ponds & water features</a></li>
+                        <li><a href="#">Garden railings</a></li>
+                    </ul>
+                </li>
+                <li class="items item5">
+                    <ul>
+                        <li><a href="#">Garden furniture</a></li>
+                        <li><a href="#">Garden seating</a></li>
+                        <li><a href="#">BBQs and accessories</a></li>
+                        <li><a href="#">Garden tables</a></li>
+                        <li><a href="#">Fire pits & chimineas</a></li>
+                        <li><a href="#">Garden furniture covers</a></li>
+                        <li><a href="#">Hot tubs & accessories</a></li>
+                        <li><a href="#">Pizza ovens</a></li>
+                        <li><a href="#">Parasols & accessories</a></li>
+                        <li><a href="#">Gazebos</a></li>
+                        <li><a href="#">Garden lighting</a></li>
+                        <li><a href="#">Pools & accessories</a></li>
+                    </ul>
+                </li>
+                <li class="items item6">
+                    <ul>
+                        <li><a href="#">Garden ornaments</a></li>
+                        <li><a href="#">Water features & fountains</a></li>
+                        <li><a href="#">Animal & pet care</a></li>
+                        <li><a href="#">Outdoor play</a></li>
+                        <li><a href="#">Paddling pools</a></li>
+                        <li><a href="#">Garden swings</a></li>
+                        <li><a href="#">Camping</a></li>
+                        <li><a href="#">Playhouses</a></li>
+                        <li><a href="#">Sport & leisure</a></li>
+                        <li><a href="#">Sandpits & play sand</a></li>
+                        <li><a href="#">Trampolines</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">Tiling & <br> Flooring</a>
+            <ul class="Tiling-container contain">
+                <li class="items item1">
+                    <ul>
+                        <li><a href="#">Laminate flooring</a></li>
+                        <li><a href="#">Luxury vinyl click flooring</a></li>
+                        <li><a href="#">Sheet vinyl</a></li>
+                        <li><a href="#">Adhesive vinyl tiles</a></li>
+                        <li><a href="#">Solid wood flooring</a></li>
+                        <li><a href="#">Engineered wood flooring</a></li>
+                        <li><a href="#">Adhesive vinyl planks</a></li>
+                        <li><a href="#">Vinyl flooring</a></li>
+                        <li><a href="#">Carpet tiles</a></li>
+                        <li><a href="#">Flooring mats</a></li>
+                        <li><a href="#">Flooring samples</a></li>
+                    </ul>
+                </li>
+                <li class="items item2">
+                    <ul>
+                        <li><a href="#">Thresholds, t-bars & reducers</a></li>
+                        <li><a href="#">Underlay</a></li>
+                        <li><a href="#">Scotias & floor trims</a></li>
+                        <li><a href="#">Gripper rods</a></li>
+                        <li><a href="#">Flooring tools</a></li>
+                        <li><a href="#">Underfloor heating</a></li>
+                    </ul>
+                </li>
+                <li class="items item3">
+                    <ul>
+                        <li><a href="#">Grey laminate flooring</a></li>
+                        <li><a href="#">Brown laminate flooring</a></li>
+                        <li><a href="#">Natural laminate flooring</a></li>
+                        <li><a href="#">White laminate flooring</a></li>
+                        <li><a href="#">Black laminate flooring</a></li>
+                        <li><a href="#">Bathroom & kitchen laminate</a></li>
+                        <li><a href="#">Bathroom & kitchen LVC</a></li>
+                        <li><a href="#">Bathroom & kitchen vinyl</a></li>
+                        <li><a href="#">Water-resistant laminate</a></li>
+                        <li><a href="#">Grey luxury vinyl click</a></li>
+                        <li><a href="#">Grey vinyl flooring</a></li>
+                        <li><a href="#">Quick-step laminate</a></li>
+                    </ul>
+                </li>
+                <li class="items item4">
+                    <ul>
+                        <li><a href="#">Outdoor tiles</a></li>
+                        <li><a href="#">Floor tiles</a></li>
+                        <li><a href="#">Wall tiles</a></li>
+                        <li><a href="#">Bathroom tiles</a></li>
+                        <li><a href="#">Kitchen tiles</a></li>
+                        <li><a href="#">Mosaic & border tiles</a></li>
+                        <li><a href="#">Rectangular tiles</a></li>
+                        <li><a href="#">Sample tiles</a></li>
+                    </ul>
+                </li>
+                <li class="items item5">
+                    <ul>
+                        <li><a href="#">Tile trims</a></li>
+                        <li><a href="#">Grout</a></li>
+                        <li><a href="#">Adhesive</a></li>
+                        <li><a href="#">Tiling trowels</a></li>
+                        <li><a href="#">Tile cutters</a></li>
+                        <li><a href="#">Tile spacers</a></li>
+                        <li><a href="#">Tile scribes</a></li>
+                        <li><a href="#">Grouting tools</a></li>
+                        <li><a href="#">Tile kits</a></li>
+                        <li><a href="#">Sealant</a></li>
+                    </ul>
+                </li>
+                <li class="items item6">
+                    <ul>
+                        <li><a href="#">White wall tiles</a></li>
+                        <li><a href="#">Grey wall tiles</a></li>
+                        <li><a href="#">Green wall tiles</a></li>
+                        <li><a href="#">Porcelain tiles</a></li>
+                        <li><a href="#">Brick effect tiles</a></li>
+                        <li><a href="#">White bathroom tiles</a></li>
+                        <li><a href="#">Grey bathroom tiles</a></li>
+                        <li><a href="#">White floor tiles</a></li>
+                        <li><a href="#">Black floor tiles</a></li>
+                        <li><a href="#">Black tiles</a></li>
+                        <li><a href="#">Blue tiles</a></li>
+                        <li><a href="#">Large floor tiles</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">Tools & <br> Equipments</a>
+            <ul class="Tools-container contain">
+                <li class="items item1">
+                    <ul>
+                        <li><a href="#">Drills</a></li>
+                        <li><a href="#">Saws</a></li>
+                        <li><a href="#">Sanders</a></li>
+                        <li><a href="#">Multi tools & hobby tools</a></li>
+                        <li><a href="#">Angle grinders</a></li>
+                        <li><a href="#">Kits & twinpacks</a></li>
+                        <li><a href="#">Impact drivers & wrenches</a></li>
+                        <li><a href="#">Screwdrivers</a></li>
+                        <li><a href="#">Nail guns</a></li>
+                        <li><a href="#">Routers</a></li>
+                        <li><a href="#">Planers</a></li>
+                        <li><a href="#">Workshop machinery</a></li>
+                    </ul>
+                </li>
+                <li class="items item2">
+                    <ul>
+                        <li><a href="#">Sawing & blades</a></li>
+                        <li><a href="#">Drill bits</a></li>
+                        <li><a href="#">Sanding</a></li>
+                        <li><a href="#">Mixed drill bit sets</a></li>
+                        <li><a href="#">Multi tool accessories</a></li>
+                        <li><a href="#">Holesaws</a></li>
+                        <li><a href="#">Angle grinder discs</a></li>
+                        <li><a href="#">Screwdriver bits</a></li>
+                        <li><a href="#">Batteries & chargers</a></li>
+                        <li><a href="#">Routing</a></li>
+                        <li><a href="#">Chucks, keys & holders</a></li>
+                        <li><a href="#">Cleaning & preparation</a></li>
+                    </ul>
+                </li>
+                <li class="items item3">
+                    <ul>
+                        <li><a href="#">Hand saws</a></li>
+                        <li><a href="#">Measures & levels</a></li>
+                        <li><a href="#">Spanners & wrenches</a></li>
+                        <li><a href="#">Screwdrivers & keys</a></li>
+                        <li><a href="#">Tool kits</a></li>
+                        <li><a href="#">Demolition</a></li>
+                        <li><a href="#">Cutting tools</a></li>
+                        <li><a href="#">Plastering tools</a></li>
+                        <li><a href="#">Woodworking tools</a></li>
+                        <li><a href="#">Pliers</a></li>
+                        <li><a href="#">Bricklaying tools</a></li>
+                        <li><a href="#">Cable tools</a></li>
+                    </ul>
+                </li>
+                <li class="items item4">
+                    <ul>
+                        <li><a href="#">Work trousers</a></li>
+                        <li><a href="#">Safety boots</a></li>
+                        <li><a href="#">Workwear</a></li>
+                        <li><a href="#">Safety footwear</a></li>
+                        <li><a href="#">Gloves</a></li>
+                        <li><a href="#">Work hoodies</a></li>
+                        <li><a href="#">Boiler suits & overalls</a></li>
+                        <li><a href="#">Face masks</a></li>
+                        <li><a href="#">Eye protection</a></li>
+                        <li><a href="#">Work jackets</a></li>
+                        <li><a href="#">Safety trainers</a></li>
+                        <li><a href="#">Work shorts</a></li>
+                    </ul>
+                </li>
+                <li class="items item5">
+                    <ul>
+                        <li><a href="#">Tool storage</a></li>
+                        <li><a href="#">Ladders & steps</a></li>
+                        <li><a href="#">Workbenches & trestles</a></li>
+                        <li><a href="#">Trolleys & carts</a></li>
+                        <li><a href="#">Cement mixers</a></li>
+                        <li><a href="#">Vacuum cleaners</a></li>
+                        <li><a href="#">Automotive</a></li>
+                        <li><a href="#">Workshop machinery</a></li>
+                        <li><a href="#">Air compressors</a></li>
+                        <li><a href="#">Torches & worklights</a></li>
+                        <li><a href="#">Tarpaulins, sheets & sacks</a></li>
+                        <li><a href="#">Generators</a></li>
+                    </ul>
+                </li>
+                <li class="items item6">
+                    <ul>
+                        <li><a href="#">Cement mixer hire</a></li>
+                        <li><a href="#">Pressure washer hire</a></li>
+                        <li><a href="#">Dehumidifier hire</a></li>
+                        <li><a href="#">Ladder hire</a></li>
+                        <li><a href="#">Generator hire</a></li>
+                        <li><a href="#">Plate compactor hire</a></li>
+                        <li><a href="#">Breaker hire</a></li>
+                        <li><a href="#">Heater hire</a></li>
+                        <li><a href="#">Drill hire</a></li>
+                        <li><a href="#">Pump hire</a></li>
+                        <li><a href="#">Vacuum hire</a></li>
+                        <li><a href="#">Saw hire</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    </div>
+    <div class="p">
+        <img src="lion.jpg" alt="">
+        <p>We are color's, In the dark</p>
+    </div>
+</body>
+</html>

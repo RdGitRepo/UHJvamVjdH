@@ -1,0 +1,162 @@
+* {
+    font-family: Calibri, Arial, Verdana, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+.pageheader {
+    background-color: white;
+}
+
+.navigationbar {
+    background: linear-gradient(to right, #4ecdc4, #556270);
+    padding-inline: 20%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .logo {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 5%;
+        font-size: 3rem;
+
+        & i {
+            color: white;
+        }
+    }
+
+    .hometabs {
+        width: 85%;
+        font-size: 1.5rem;
+        padding-inline: 10%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+
+        & a {
+            color: white;
+        }
+
+        :hover {
+            color: #080f1c;
+        }
+    }
+
+    .searchbaricon {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 5%;
+        font-size: 1.5rem;
+
+        & i {
+            color: white;
+        }
+    }
+
+    .logoutbutton {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 5%;
+        font-size: 1.5rem;
+
+        & i {
+            color: white;
+        }
+    }
+}
+
+
+
+.pagebody {
+    box-sizing: border-box;
+    background-color: #00B4DB;
+    padding-inline: 10%;
+}
+
+.allcontent {
+    background-color: #d9a7c7;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    padding: 0.6rem;
+
+    .photoes {
+        background-color: white;
+        width: 28%;
+        height: 25rem;
+        flex-grow: 1;
+
+        & img {
+            width:100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.pagefooter {
+    background-color: white;
+}
+
+.pagefootercontent {
+    background-color: #34e89e;
+    height: 20rem;
+
+    .footerlinks {
+        background: linear-gradient(to right, #6190e8, #a7bfe8);
+        height: 100%;
+        margin-inline: 20%;
+
+        .authorinformation {
+            font-size: 1.5rem;
+            padding: 2rem;
+            display: flex;
+            flex-direction: row;
+            height: 70%;
+
+            & img {
+                border-radius: 50%;
+                margin-inline : 2rem;
+            }
+
+            & p {
+                align-content: center;
+                font-size: 1.2rem;
+            }
+        }
+
+        & ul {
+            font-size: 1.5rem;
+            padding: 2rem;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap:2rem;
+            height: 30%;
+            list-style: none;
+            text-decoration: underline;
+            justify-content: center;
+        }
+    }
+}
+
+.pagefooterrights {
+    background-color: rgb(58, 145, 177);
+    color: white;
+    height: 2rem;
+    text-align: center;
+    line-height: 2rem;
+}

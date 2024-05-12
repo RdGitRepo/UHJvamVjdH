@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover multiside sliding effect</title>
+    <style>
+        body{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        h1{
+            text-align: center;
+            font-variant: small-caps;
+            font-weight: 500;
+            font-size: 30px;
+            line-height: 30px;
+
+            & span{
+                color: blue;
+            }
+        }
+        .box{
+            width: 400px;
+            border: 1px solid #000;
+            margin: 20px auto;
+            overflow: hidden;
+            box-sizing: border-box;
+            
+            .img-box{
+                display: block;
+                position: relative;
+                box-sizing: border-box;
+                
+                & img{
+                    width: 100%;
+                    height: auto;
+
+                }    
+            }
+
+            & :is(.img-box, .icon-box)::before,
+            & :is(.img-box, .icon-box)::after{
+                content: "";
+                width: 50%;
+                height: 50%;
+                background: rgba(56, 56, 56, 0.6);
+                position: absolute;
+                transition: all 0.3s ease-in-out;
+
+            }
+            
+            .img-box::before{
+                top: 0%;
+                left: -50%;
+            }
+            &:hover .img-box::before{
+                left: 0%;
+                background: rgba(56, 56, 56, 0.4);
+            }
+
+            .img-box::after{
+                top: -50%;
+                right: 0%;
+            }
+            &:hover .img-box::after{
+                top: 0%;
+            }
+
+            .icon-box::before{
+                left: 0%;
+                bottom: -50%;
+            }
+            &:hover .icon-box::before{
+                bottom: 0%;
+            }
+            .icon-box::after{
+                right: -50%;
+                bottom: 0%;
+            }
+            &:hover .icon-box::after{
+                right: 0%;
+                background: rgba(56, 56, 56, 0.4);
+            }
+        }
+
+        
+    </style>
+</head>
+<body>
+    <h1><span>Duckpool Gaming</span><br>Hover multiside sliding effect</h1>
+    <div class="box">
+        <a href="" class="img-box">
+            <img src="image/Duckpool.jpg" alt="">
+            <i class="icon-box"></i>
+        </a>
+    </div>
+</body>
+</html>

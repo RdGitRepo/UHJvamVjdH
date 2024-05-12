@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: calibri, Arial, Helvetica, sans-serif;
+}
+
+:root{
+    --titlemargins : 10px;
+    --marginbottoms : 8px;
+}
+
+hr {
+    margin-block: 5px;
+    background-color: black;
+}
+
+.mainform {
+    margin: 1rem auto;
+    max-width: 800px;
+    border-left: 8px solid orange;
+    padding-left: 1rem;
+}
+
+.headerofresume {
+    display: flex;
+    flex-direction: row;
+}
+
+.nameanddescriptions {
+
+    & p {
+        margin-block: var(--titlemargins);
+    }
+}
+
+.fullname {
+    font-size: 3.2rem;
+}
+
+.addressofemployee {
+    font-size: 1.2rem;
+}
+
+/* .employeeimage {
+    width: 30rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-image: url("./images/scissors.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    & img {
+        width:100%;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+    }
+} */
+
+:where(.titleforexperience, .titleforinternships, .educationtitle, .titleforskills, .projecttitle) {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-block: var(--titlemargins);
+}
+
+.experienceinformation {
+
+    .datesforcompanyjoiningandresigning {
+        margin-top: var(--titlemargins);
+    }
+
+    .companycompleteinformation{
+        & p {
+            margin-bottom: var(--marginbottoms);
+        }
+    }
+}
+
+.internshipsexperince {
+
+    .datesforinternshipsjoiningandresigning {
+        margin-top: var(--titlemargins);
+    }
+
+    .internshipscompleteinformation{
+        & p {
+            margin-bottom: var(--marginbottoms);
+        }
+    }
+}
+
+.educationcompletedetail > * {
+    margin-bottom: var(--marginbottoms);
+}
+
+:where(.skillsdefine, .achievementsineducation){
+    margin-left: 2rem;
+}
+
+:where(.datesforcompanyjoiningandresigning, .datesforinternshipsjoiningandresigning, .educationdate){
+    font-size: 1.1rem;
+}

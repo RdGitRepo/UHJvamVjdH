@@ -1,0 +1,98 @@
+*{
+    font-family: calibri, Arial, Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+
+    & a{
+        display: inline-block;
+        text-decoration: none;
+    }
+
+    & ul{
+        list-style: none;
+    }
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+    font: 2rem;
+}
+
+#mainBody{
+    & nav {
+        display: flex;
+        background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+        align-items: center;
+        gap: 5rem;
+        height: 5rem;
+        & ul{
+            margin-left: auto;
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            justify-content: center;
+            & li{
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                color: white;
+                font-size: 1.5rem;
+                & a{
+                    color: white;
+                    font-size: 1.5rem;
+                    &:hover{ 
+                        color: hsl(200,100%,50%);
+                    }
+                }
+                &:nth-child(1)::before{
+                    content: "\e3af";
+                    font-family: fontawesome;
+                }
+                &:nth-child(2)::before{
+                    content: "\f302";
+                    font-family: fontawesome;
+                }
+                &:nth-child(3)::before{
+                    content: "\f2bb";
+                    font-family: fontawesome;
+                }
+                &:nth-child(4)::before{
+                    content: "\f2b9";
+                    font-family: fontawesome;
+                }
+                &:nth-child(5)::before{
+                    content: "\f0c0";
+                    font-family: fontawesome;
+                }
+            }
+        }
+        & button {
+            all: unset;
+            color: white;
+            font-size: 1.8rem;
+            margin-inline: auto 2rem;
+            &:hover{
+                color: #777777e0;
+            }
+        }
+
+       & form{
+           height: 50%;
+           & input{
+               background: inherit;
+               border: 1px solid #ffffff;
+               width: 20rem;
+               height: 100%;
+        }
+       }
+
+        #anchorlogo {
+            font-size: 2.5rem;
+            color: red;
+            margin-inline: 2rem;
+        }
+    }
+}

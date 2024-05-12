@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image hover with sliding caption</title>
+    <style>
+        body{
+            font:small-caps 500 16px/35px century;
+        }
+        h1{
+            text-align: center;
+
+            & span{
+                color: blue;
+
+                &:hover{
+                    color: green;
+                }
+            }
+        }
+        .box{
+            border: 1px solid #000;
+            width: 400px;
+            height: auto;
+            margin: 20px auto;
+            position: relative;
+            overflow: hidden;
+            
+
+            &:hover .sliding{
+                inset-block-start: 0%;
+            }
+
+            & img{
+                width: 100%;
+                
+            }
+
+            .sliding{
+                width: 100%;
+                height: 100%;
+                background: rgba(0,0,0,0.7);
+                color:white;
+                padding: 10px;
+                box-sizing: border-box;
+                position: absolute;
+                inset-block-start: -100%;
+                inset-inline-start: 0;
+                transition: all 1s ease-in-out ;
+                text-align: center;
+                
+            }
+
+            .sliding p{
+                padding: 20px;
+                border-top: 1px solid #fff;
+                border-bottom: 1px solid #fff;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <h1><span>Duckpool Gaming</span> <br> image sliding hover effect</h1>
+    <div class="box">
+        <img src="image/Duckpool.jpg" alt="">
+        <div class="sliding">
+            <h2>Sliding hover effect</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias neque quasi voluptatem. Eveniet eum aut laborum exercitationem. Eius dignissimos impedit in quibusdam. Cupiditate ullam itaque sequi veniam fugit totam beatae.</p>
+        </div>
+    </div>
+</body>
+</html>

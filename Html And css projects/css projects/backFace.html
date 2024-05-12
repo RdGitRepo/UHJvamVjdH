@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css transform 3d</title>
+    <style>
+        body {
+            font-family: oblique small-caps 600 25px arial;
+            text-align: center;
+            background: #f2f2f2;
+        }
+
+        .card {
+            width: 150px;
+            height: 150px;
+            border: 0px solid black;
+            position: absolute;
+            left: calc(50% - 75px);
+            top: calc(50% - 75px);
+            perspective: 800px;
+
+
+
+        }
+
+        .content {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            transition: all 1s;
+            transform-style: preserve-3d;
+
+        }
+
+        .card:hover .content {
+            transform: rotatey(180deg);
+        }
+
+        .front,
+        .back {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background: #fff;
+            border-radius: 5px;
+            color: rgb(0, 120, 120);
+            font-size: 35px;
+            line-height: 140px;
+            backface-visibility: hidden;
+        }
+
+        .back {
+            background: rgb(0, 120, 120);
+            color: #fff;
+            transform: rotatey(180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Css transfor 3d</h1>
+
+    <div class="card">
+        <div class="content">
+            <div class="front">Front</div>
+            <div class="back">Back!</div>
+        </div>
+    </div>
+</body>
+
+</html>

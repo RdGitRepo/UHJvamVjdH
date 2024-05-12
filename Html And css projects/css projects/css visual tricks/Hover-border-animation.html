@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border-animation</title>
+    <style>
+        body{
+            font-family: century;
+        }
+        h1{
+            text-align: center;
+            font-variant: small-caps;
+            font-weight: 500;
+            font-size: 30px;
+            line-height: 30px;
+
+            & span{
+                color: blue;
+            }
+
+        }
+
+        .box{
+            width: 400px;
+            height: 265px;
+            border: 1px solid #000;
+            margin: 20px auto;
+            position: relative;
+            box-sizing: border-box;
+            overflow: hidden;
+
+            &::before,
+            &::after{
+                content: "";
+                width: 0%;
+                height: 0%;
+                position: absolute;
+                z-index: 1;
+            }
+            &::before{
+                border-left: 2px solid #ffffff;
+                border-bottom: 2px solid #ffffff;
+                left: 4.5%;
+                bottom: 5%;
+                opacity: 0;
+                transition: all 1s linear;
+            }
+
+            &::after{
+                border-top: 2px solid #ffffff;
+                border-right: 2px solid #ffffff;
+                top:4.5%;
+                right: 5%;
+                opacity: 0;
+                transition: all 1s linear;
+            }
+
+            &:hover::before, &:hover::after{
+                width: 90%;
+                height: 90%;
+                height: 90%;
+                opacity: 1;
+            }
+
+            &:hover span.post{
+                opacity: 1;
+            }
+            &:hover h3.name{
+                opacity: 0;
+            }
+
+            &:hover img{
+                transform: scale(1.05);
+            }
+
+            & img{
+                width: 100%;
+                height: auto;
+                position: absolute;
+                box-sizing: border-box;
+                transform: scale(1);
+                transition: all 0.5s ease-in-out;
+            }
+            .box-content{
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                color: rgb(255, 255, 255);
+                left: 40px;
+                top: 20px;
+                line-height: 10px;
+                font-size: 20px;
+
+                .name,
+                .post{
+                    opacity: 0;
+                    margin: 0;
+                    position: absolute;
+                    left: 0%;
+                    top: 8%;
+                    transition: all 0.8s ease-in-out;
+                }
+                .name{
+                    opacity: 1;
+                }
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1><span>Duckpool Gaming</span><br>Hover border animation</h1>
+
+    <div class="box">
+        <img src="image/border-anime.jpg" alt="">
+        <div class="box-content">
+            <h3 class="name">Learing</h3>
+            <span class="post">Web-designer</span>
+        </div>
+    </div>
+</body>
+</html>
