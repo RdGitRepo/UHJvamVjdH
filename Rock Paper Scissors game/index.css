@@ -1,0 +1,93 @@
+* {
+    font-family: Calibri, verdana, arial, 'Trebuchet MS', sans-serif;
+    margin : 0;
+    padding : 0;
+    text-decoration: none;
+    text-align: center;
+}
+
+h1 {
+    background-color: rgb(62, 62, 154);
+    color: white;
+    height: 5rem;
+    line-height: 5rem;
+    font-size: 2.5rem;
+}
+
+.stackimages {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap : 30px;
+    margin-inline : 25px;
+    margin-block : 50px;
+
+    & div {
+        display: flex;
+        flex-direction: row;
+        border-radius: 50%;
+        width:130px;
+        height: 130px;
+        background-color: white;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+            cursor: pointer;
+            background-color: black;
+        }
+        
+        & img {
+            width:120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+    }
+}
+
+.score {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap : 3rem;
+    margin-inline : 25px;
+    margin-block : 30px;
+}
+
+.userscore {
+    font-size: 3rem;
+
+    & + label {
+        font-size: 2rem;
+    }
+}
+
+.computerscore {
+    font-size: 3rem;
+
+    & + label {
+        font-size: 2rem;
+    }
+}
+
+.finalmessagecontainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.finalmessge {
+    margin-block: 1rem;
+    margin-inline: auto;
+    font-size: 1.6rem;
+    background-color: black;
+    color: white;
+    border-radius: 0.6rem;
+    padding: 0.5rem;
+}
+
+.resetgame {
+    margin-block: 1rem;
+    margin-inline: auto;
+    font-size: 1.2rem;
+}

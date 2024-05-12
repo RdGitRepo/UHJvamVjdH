@@ -1,0 +1,248 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+html,
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.navbar{
+    position: sticky;
+    top: 0 ;
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+
+    .icon,
+    .menuIcon{
+        width: 20%;
+    }
+
+    .icon{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding-left: 2%;
+        & button{
+            border: none;
+            background-color: transparent;
+        }
+    }
+    .title{
+        color: white;
+        font-size: 2rem;
+        align-self: center;
+        flex-grow: 1;
+        text-align: center;
+        display: none;
+    }
+    .navLinks{
+        flex-grow: 1;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        gap: .5rem;
+        & li{
+            & button{
+                border: none;
+                background-color: transparent;
+                color: white;
+                font-size: 1.5rem;
+                padding: 1rem 1.5rem;
+                border-radius: .7rem;
+                text-transform: capitalize;
+
+                &:hover, &:focus-visible{
+                    background-color: white;
+                    color: black;
+                }
+            }
+            & button.active{
+                background-color: white;
+                color: black;
+            }
+        }
+    }
+    .menuIcon{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 2%;
+        position: relative;
+
+        & button{
+            background-color: transparent;
+            border: none;
+            padding: .8rem;
+
+            &:hover, &:focus-visible{
+                background-color: white;
+                border-radius: .7rem;
+                & svg{
+                    stroke: black;
+                }
+            }
+        }
+        .menuLinks{
+            width: 150px;
+            margin: 0;
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            padding-block: .5rem;
+            padding-inline: 0;
+            background-color: white;
+            position: absolute;
+            top: 3rem;
+            right: 5.5rem;
+            border-radius: .5rem;
+            box-shadow: 0px 1px 3px #bfbfbf, 1px 3px 6px #bfbfbf;
+            & li{
+                & button{
+                    width: 100%;
+                    padding: .5rem 1rem;
+                    background-color: transparent;
+                    color: black;
+                    border: none;
+                    border-radius: 0;
+                    text-transform: capitalize;
+
+                    &:hover, &:focus-visible{
+                        background-color: #c3c3c3;
+                    }
+                }
+                & button.active{
+                    background-color: #c3c3c3;
+                }
+            }
+        }
+    }
+}
+.contentBody{
+
+    .newsContainer{
+        margin: 0 auto;
+        padding: 2rem 1rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-auto-rows: minmax(550px, auto);
+        gap: 1.5rem 1rem;
+        max-width: 1500px;
+    
+        :where(.newsCard, .newsCard > .img, .newsInfo){
+            display: flex;
+            flex-direction: column;
+        }
+        .newsCard{
+            box-shadow: 0px 1px 3px #bfbfbf, 1px 3px 6px #bfbfbf;
+            border-radius: .5rem;
+            background-color: #2c3e50;
+            color: white;
+            overflow: hidden;
+    
+            .img{
+                width: 100%;
+                height: min-content;
+                box-shadow: 0px 3px 5px #777;
+                & img{
+                    width: 100%;
+                    aspect-ratio: 3/2;
+                    object-fit: cover;
+                    object-position: left;
+                }
+            }
+            .newsInfo{
+                flex-grow: 1;
+                gap: 1rem;
+                padding: 1rem;
+    
+                & h1{
+                    margin: 0;
+                    font-size: 1.5rem;
+                }
+                & p{
+                    margin: 0;
+                    font-size: 1.15rem;
+                    flex-grow: 1;
+                }
+                & a{
+                    width: 100%;
+                    padding: 1rem;
+                    background-color: white;
+                    color: black;
+                    text-decoration: none;
+                    font-size: 1.5rem;
+                    text-align: center;
+                    font-weight: 600;
+                    border-radius: .5rem;
+                    transition: background-color 100ms ease-in, color 100ms ease-in;
+                    
+                    &:hover, &:focus-visible{
+                        background-color: hsl(200, 100%, 50%);
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+    .space{
+        height: 10vh;
+    }
+    .navigation{
+        max-width: 1500px;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        padding: 1rem;
+    
+        & button{
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            padding: 1rem 1.5rem;
+            font-size: 1.5rem;
+            border-radius: .8rem;
+            box-shadow: 0px 1px 3px #bfbfbf, 1px 3px 6px #bfbfbf;
+    
+            &:hover, &:focus-visible{
+                box-shadow: 0px 1px 3px #bfbfbf;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width:1150px) {
+    .navbar{
+        .navLinks{
+            display: none;
+        }
+        .title{
+            display: block;
+        }
+    }
+}
+
+
+@media screen and (max-width:650px) {
+    .navbar{
+        .title{
+            font-size: 1.8rem;
+        }
+    }
+}
+
+@media screen and (max-width:450px) {
+    .navbar{
+        .title{
+            translate: -4% 0;
+        }
+    }
+}

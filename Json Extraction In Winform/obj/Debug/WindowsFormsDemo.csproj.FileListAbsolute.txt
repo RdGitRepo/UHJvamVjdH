@@ -1,0 +1,13 @@
+D:\Ritik data\Projects\WindowsFormsDemo\WindowsFormsDemo\bin\Debug\WindowsFormsDemo.exe.config
+D:\Ritik data\Projects\WindowsFormsDemo\WindowsFormsDemo\bin\Debug\WindowsFormsDemo.exe
+D:\Ritik data\Projects\WindowsFormsDemo\WindowsFormsDemo\bin\Debug\WindowsFormsDemo.pdb
+D:\Ritik data\Projects\WindowsFormsDemo\WindowsFormsDemo\obj\Debug\WindowsFormsDemo.csproj.AssemblyReference.cache
+D:\Ritik data\Projects\WindowsFormsDemo\WindowsFormsDemo\obj\Debug\WindowsFormsDemo.csproj.SuggestedBindingRedirects.cache
+D:\Ritik data\Projects\WindowsFormsDemo\WindowsFormsDemo\obj\Debug\WindowsFormsDemo.frmjsonextractionWinform.resources
+D:\Ritik data\Projects\WindowsFormsDemo\WindowsFormsDemo\obj\Debug\WindowsFormsDemo.Properties.Resources.resources
+D:\Ritik data\Projects\WindowsFormsDemo\WindowsFormsDemo\obj\Debug\WindowsFormsDemo.csproj.GenerateResource.cache
+D:\Ritik data\Projects\WindowsFormsDemo\WindowsFormsDemo\obj\Debug\WindowsFormsDemo.csproj.CoreCompileInputs.cache
+D:\Ritik data\Projects\WindowsFormsDemo\WindowsFormsDemo\obj\Debug\WindowsFormsDemo.exe
+D:\Ritik data\Projects\WindowsFormsDemo\WindowsFormsDemo\obj\Debug\WindowsFormsDemo.pdb
+D:\Ritik data\Projects\WindowsFormsDemo\WindowsFormsDemo\bin\Debug\Newtonsoft.Json.dll
+D:\Ritik data\Projects\WindowsFormsDemo\WindowsFormsDemo\obj\Debug\WindowsFormsDemo.csproj.CopyComplete

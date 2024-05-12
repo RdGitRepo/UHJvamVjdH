@@ -1,0 +1,10 @@
+.mycssforNavbar {
+    background-color: rgb(109, 42, 243) !important;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    
+    & * {
+        color: white !important;
+    }
+}

@@ -1,0 +1,18 @@
+.imagefornews {
+    width: 100%;
+
+    & img {
+        width: 100%;
+        aspect-ratio: 16/9;
+        object-fit: cover;
+    }
+}
+
+.cardbodyclass {
+    display: flex;
+    flex-direction: column;
+
+    & p {
+        flex-grow: 1;
+    }
+}
