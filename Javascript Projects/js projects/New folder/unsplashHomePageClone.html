@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="unsplashHomePageClone.css">
+    <script src="jquery-3.7.1.min.js"></script>
+    <script type="module" src="./unsplashHomePageClone.js" defer></script>
+    <title>Unsplash</title>
+</head>
+<body>
+    <main class="unsplash">
+        <div class="homeNavBar">
+            <div class="logo"><a href="https://youtube.com" class="home"><i class="fa-brands fa-unsplash logoFont"></i></a></div>
+            <div class="nav">
+                <div class="search">
+                    <button class="btnSearch"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <input type="search" name="searchInput" class="searchInput" placeholder="Search high-resolution images">
+                    <button class="btnSearchByImage"><i class="material-icons">center_focus_weak</i></button>
+                </div>
+                <ul class="businessLinks">
+                    <li class="explore">
+                        <a href="">Explore</a>
+                        <div id="explore" class="popover">
+                            <a href="">Images</a>
+                            <a href="">Backgrounds</a>
+                            <a href="">Wallpapers</a>
+                        </div>
+                    </li>
+                    <li><a href="">Advertise</a></li>
+                    <li class="pro"><a href="" class="proPlus">Unsplash+</a></li>
+                </ul>
+                <div class="separator"></div>
+                <div class="authenticate">
+                    <a href="" class="login">Log in</a>
+                    <button class="uploadImage">Submit a photo</button>
+                </div>
+            </div>
+            <button class="sidebarToggle filterBtn"><i class="fa-solid fa-bars"></i></button>
+            <div class="sidebar hide" >
+                <ul class="sidebarBody">
+                    <li class="listItem item1">
+                        <header class="header">
+                            <span>
+                            <i style="translate: 10px 0px; font-size: 5px;" class="fa-solid fa-house logoo"></i>
+                            <i class="fa-solid fa-building logoo"></i>
+                            </span>
+                            <h2 class="heading">Company</h2>
+                        </header>
+                        <ul class="sidebarLinks">
+                            <li><a href="">About</a></li>
+                            <li><a href="">History</a></li>
+                            <li><a href="">Join the team</a></li>
+                            <li><a href="">Blog</a></li>
+                            <li><a href="">Press</a></li>
+                            <li><a href="">Contact Us</a></li>
+                            <li><a href="">Help Center</a></li>
+                            <li class="socialLinks">
+                                <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+                                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="listItem item2">
+                        <header class="header">
+                            <span><i class="fa-solid fa-mobile-screen-button logoo"></i></span>
+                            <h2 class="heading">Product</h2>
+                        </header>
+                        <ul class="sidebarLinks">
+                            <li><a href="">Developers/API</a></li>
+                            <li><a href="">Unsplash Dataset</a></li>
+                            <li><a href="">unsplash for iOS</a></li>
+                            <li><a href="">Apps & Plugins</a></li>
+                        </ul>
+                    </li>
+                    <li class="listItem item3">
+                        <header class="header">
+                            <span><i class="fa-solid fa-people-group logoo"></i></span>
+                            <h2 class="heading">Community</h2>
+                        </header>
+                        <ul class="sidebarLinks">
+                            <li><a href="">Become a Contributor</a></li>
+                            <li><a href="">Topics</a></li>
+                            <li><a href="">Collections</a></li>
+                            <li><a href="">Trends</a></li>
+                            <li><a href="">Unsplash Awards</a></li>
+                            <li><a href="">Stats</a></li>
+                        </ul>
+                    </li>
+                    <li class="listItem item4">
+                        <header class="header">
+                        <span><i class="fa-regular fa-compass logoo"></i></span>
+                            <h2 class="heading">Explore</h2>
+                        </header>
+                        <ul class="sidebarLinks">
+                            <li><a href="">Images</a></li>
+                            <li><a href="">Backgrounds</a></li>
+                            <li><a href="">Wallpapers</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="sidebarFooter"></ul>
+            </div>
+        </div>
+        <div class="filterContainer">
+            <div class="selectContent">
+                <a href="" data-content="selected"><i class="fa-solid fa-image"></i><span>Photos 10k</span></a>
+                <a href=""><i class="fa-solid fa-images"></i><span>Collections 209k</span></a>
+                <a href=""><i class="fa-solid fa-user-group"></i><span>Users 7.2k</span></a>
+            </div>
+            <div class="contentFilter">
+                <div class="container">
+                    <button class="filterBtn licenseFilter"><i class="material-icons">copyright</i><span>License <b>All</b></span><i class="fa-solid fa-caret-down"></i></button>
+                    <div class="filterBox f1 hide">
+                        <h3 class="head">License</h3>
+                        <a href="" data-select="selected"><i class="material-icons check">check</i><span>All</span></a>
+                        <a href=""><i class="material-icons check">check</i><span>Unsplash+</span></a>
+                        <a href=""><i class="material-icons check">check</i><span>Free</span></a>
+                    </div>
+                </div>
+                <div class="container">
+                    <button class="filterBtn orientationFilter"><i class="material-icons">space_dashboard</i><span>Orientation <b>All</b></span><i class="fa-solid fa-caret-down"></i></button>
+                    <div class="filterBox f2 hide">
+                        <h3 class="head">Orientation</h3>
+                        <a href="" data-select="selected"><i class="material-icons check">space_dashboard</i><span>All</span></a>
+                        <a href=""><i class="material-icons show">crop_landscape</i><span>Landscape</span></a>
+                        <a href=""><i class="material-icons show">crop_portrait</i><span>Portrait</span></a>
+                    </div>
+                </div>
+                <div class="container">
+                    <button class="filterBtn sortByFilter"><i class="material-icons">unfold_more</i><span>Sort by <b>Relevance</b></span><i class="fa-solid fa-caret-down"></i></button>
+                    <div class="filterBox f3 hide">
+                        <h3 class="head">Sort by</h3>
+                        <a href="" data-select="selected"><i class="material-icons check">check</i><span>Relevance</span></a>
+                        <a href=""><i class="material-icons check">check</i><span>Newest</span></a>
+                        <a href=""><i class="material-icons check">check</i><span>Curated</span></a>
+                    </div>
+                </div>
+                <div style="display: none;">
+                    <button class="visible" data-openModal><i class="material-icons">tune</i><span>Filters</span></button>
+                    <dialog data-modal class="modal">
+                        <form action="" class="form">
+                            <button type="submit" formmethod="dialog" class="outsideBtn"><i class="material-icons">close</i></button>
+                            <header class="dialogHead">
+                                <h2 class="heading">Filters</h2>
+                            </header>
+                            <div class="body">
+                                <div class="contain">
+                                    <h3 class="filterHead">Sort by</h3>
+                                    <a href="" data-select="selected"><i class="material-icons">check</i><span>Relevance</span></a>
+                                    <a href=""><i class="material-icons">check</i><span>Newest</span></a>
+                                    <a href=""><i class="material-icons">check</i><span>Curated</span></a>
+                                </div>
+                                <div class="contain">
+                                    <h3 class="filterHead">Orientation</h3>
+                                    <a href="" data-select="selected"><i class="material-icons ori">space_dashboard</i><span>All</span></a>
+                                    <a href=""><i class="material-icons ori">crop_landscape</i><span>Landscape</span></a>
+                                    <a href=""><i class="material-icons ori">crop_portrait</i><span>Portrait</span></a>
+                                </div>
+                                <div class="contain">
+                                    <h3 class="filterHead">License</h3>
+                                    <a href="" data-select="selected"><i class="material-icons">check</i><span>All</span></a>
+                                    <a href=""><i class="material-icons">check</i><span>Unsplash+</span></a>
+                                    <a href=""><i class="material-icons">check</i><span>Free</span></a>
+                                </div>
+                            </div>
+                            <div class="footer">
+                                <button type="submit" class="clear" data-close>Clear</button>
+                                <button type="submit" class="close" data-save formmethod="dialog">Close</button>
+                            </div>
+                        </form>
+                    </dialog>
+                </div>
+            </div> 
+        </div>
+        <div class="mainContent">
+            <div class="contentHead">
+                <header>
+                    <h3 class="contentHeading">House</h3>
+                </header>
+                <div class="scroll backward">
+                    <ul class="nav" data-nav id="navLoad">
+                        <li><a href="" id="first">Interior design</a></li>
+                        <li><a href="">House interior</a></li>
+                        <li><a href="">Villa</a></li>
+                        <li><a href="">Neighborhood</a></li>
+                        <li><a href="">Apartment</a></li>
+                        <li><a href="">Sky</a></li>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Kitchen</a></li>
+                        <li><a href="">Old house</a></li>
+                        <li><a href="">Bedroom</a></li>
+                        <li><a href="">Modern house</a></li>
+                        <li><a href="" id="last">Interior</a></li>
+                    </ul>
+                    <button class="before"><i class="material-icons">arrow_back_ios</i></button>
+                    <button class="after"><i class="material-icons">arrow_back_ios</i></button>
+                </div>
+            </div>
+            <div class="contentBody">
+                <div class="flexColumn col1"></div>
+                <div class="flexColumn col2"></div>
+                <div class="flexColumn col3"></div>
+            </div>
+            <div class="contentFooter">
+                <div class="loadMore">Load More</div>
+                <div class="empty"></div>
+            </div>
+            <div class="pageEnd">
+                <a href="https://youtube.com" class="home"><i class="fa-brands fa-unsplash logoFont"></i></a>
+                <p>Make something awesome</p>
+            </div>
+        </div>
+    </main>
+    <template class="legal">
+        <li class="listItem item5">
+            <header class="header">
+                <span><i class="material-icons logoo">description</i></span>
+                <h2 class="heading">Legal</h2>
+            </header>
+            <ul class="sidebarLinks">
+                <li><a href="">License</a></li>
+                <li><a href="">Privacy Policy</a></li>
+                <li><a href="">Terms</a></li>
+                <li><a href="">Security</a></li>
+            </ul>
+        </li>
+        <li class="listItem item6">
+            <header class="header">
+                <span><i class="material-icons logoo">translate</i></span>
+                <h2 class="heading">English</h2>
+            </header>
+            <ul class="sidebarLinks">
+                <li><a href="">Deutsch</a></li>
+                <li><a href="">English</a></li>
+                <li><a href="">Espanol</a></li>
+                <li><a href="">Francais</a></li>
+                <li><a href="">Italiano</a></li>
+            </ul>
+        </li>
+    </template>
+    <template class="initialFooter">
+        <li class="footerLinks"><a href="">License</a></li>
+        <li class="footerLinks"><a href="">Privacy Policy</a></li>
+        <li class="footerLinks"><a href="">Terms</a></li>
+        <li class="footerLinks"><a href="">Security</a></li>
+        <button class="footerLinks btn"><i class="material-icons" style="font-size: 20px;">translate</i> English &#x25BC;</button>
+        <div class="langContainer hide">
+            <div class="languages">
+                <h3 class="title">Select your language</h3>
+                <ul class="selectLang">
+                    <li><a href=""><i class="material-icons check">check</i><span>Deutsch</span></a></li>
+                    <li><a href="" class="selected"><i class="material-icons check">check</i><span>English</span></a></li>
+                    <li><a href=""><i class="material-icons check">check</i><span>Espanol</span></a></li>
+                    <li><a href=""><i class="material-icons check">check</i><span>Francais</span></a></li>
+                    <li><a href=""><i class="material-icons check">check</i><span>Italiano</span></a></li>
+                    <li><a href=""><i class="material-icons check">check</i><span>日本語</span></a></li>
+                    <li><a href=""><i class="material-icons check">check</i><span>한국인</span></a></li>
+                    <li><a href=""><i class="material-icons check">check</i><span>Português (Brasil)</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </template>
+    <template class="copyFooter">
+        <li class="footerLinks btns">
+            <button>Submit a photo</button>
+            <button>Log in</button>
+        </li>
+        <li class="footerLinks">
+            <span>New to Unsplash?</span>
+            <a href="">Sign up for free</a>
+        </li>
+    </template>
+
+    <template class="gridItem">
+        <figure class="figure">
+            <div class="imageContainer">
+                <div class="image">
+                    <a href="https://youtube.com">
+                        <img src="" alt="" srcset="">
+                    </a>
+                    <div class="overlay">
+                        <div class="layer1">
+                            <button class="lay1Btn"><i class="fa-solid fa-heart"></i></button>
+                            <button class="lay1Btn"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                        <div class="layer2">
+                            <div class="user">
+                                <div class="profile">
+                                    <a href="">
+                                        <img src="https://upload.wikimedia.org/wikipedia/en/b/b0/AldnoahZerovol1.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="about">
+                                    <a href="https://www.wikipedia.org/">Asseylum vers allusia</a>
+                                    <p>Princess of vers empire</p>
+                                </div>
+                            </div>
+                            <a href="https://chat.openai.com/" class="download"><i class="fa-solid fa-download"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <figcaption class="caption">
+                <a href=""></a>
+                <a href=""></a>
+                <a href=""></a>
+            </figcaption>
+        </figure>
+    </template>
+    <!-- <div class="try">
+        
+    </div> -->
+</body>
+</html>
