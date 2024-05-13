@@ -1,0 +1,181 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+
+    .body-container {
+        max-width: 400px;
+        margin: auto;
+        margin-bottom: 5rem;
+        padding: 20px;
+    }
+}
+
+.form-group {
+    margin-bottom: 20px;
+
+    & label {
+        margin-bottom: 0.5rem;
+    }
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="checkbox"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type="checkbox"] {
+    width: auto;
+}
+
+.MVC-Label {
+    margin: auto;
+    font-size: 1.1rem;
+}
+
+
+@keyframes fire {
+    0% { background-position: 0 0; }
+    100% { background-position: 100% 0; }
+}
+
+input[type="text"].fire {
+    background: linear-gradient(to right, #ff0000, #ff7f00, #ffff00, #ff7f00, #ff0000);
+    background-size: 200% auto;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    animation: fire 1.5s infinite alternate;
+}
+
+
+@keyframes water {
+    0% {
+        background-position: 50% 0%;
+    }
+    50% {
+        background-position: 50% 100%;
+    }
+    100% {
+        background-position: 50% 0%;
+    }
+}
+
+.water {
+    background: linear-gradient(to bottom, #add8e6, #87ceeb, #add8e6);
+    background-size: 100% 200%;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    animation: water 2s infinite linear;
+}
+
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    margin-bottom: 2rem;
+    position: sticky;
+    top: 0;
+
+    .nav-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        height: 2rem;
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+.logo {
+    margin: 0;
+}
+
+.home-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    display: block;
+    margin : 0;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.footer p {
+    margin : 0;
+    padding: 0;
+    height: 3rem;
+    line-height: 3rem;
+}
+
+.foo-container {
+    margin : 0;
+    padding: 0;
+}
+
+.button-container {
+    text-align: center; /* Align buttons in the center */
+}
+
+.responsive-button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 0px; /* Add margin between buttons */
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    .nav-container {
+        display: flex;
+    }
+
+
+    .home-logo {
+        display: block;
+        margin: 0;
+    }
+
+    .responsive-button {
+        display: block; /* Display buttons as block elements */
+        width: 60%; /* Set width to 80% of the container */
+        margin: 10px auto; /* Center buttons horizontally */
+    }
+
+    /* .home-btn {
+        display: block;
+        margin-inline: auto 0;
+    } */
+}
+
