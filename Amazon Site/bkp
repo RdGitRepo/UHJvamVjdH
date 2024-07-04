@@ -1,0 +1,144 @@
+    <section class="Navbar">
+        <div class="f">
+            <img src="image/images.png" alt="amazon.logo">
+            <span>.in</span>
+        </div>
+        <div class="k">
+            <i class="fa-solid fa-location-dot"></i>
+            <div class="k-t">
+                <span>
+                    Delivery to Mumbai 400070
+                </span>
+                <span>
+                    Update Location
+                </span>
+            </div>
+        </div>
+        <div class="l">
+            <span>
+                All
+                <i class="fa-solid fa-angle-down"></i>
+            </span>
+            <span>
+                <input type="text" name="enter value" id="" placeholder="Search in Amazon">
+            </span>
+            <span>
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </span>
+        </div>
+        <div class="p">
+            <span>
+                
+            </span>
+            <span>
+                en
+            </span>
+            <span>
+                <i class="fa-solid fa-angle-down"></i>
+            </span>
+        </div>
+        <div class="g">
+            <span>
+                ggfgfgfgfgf
+            </span>
+            <span>
+                <span>
+                    ghggfgfgdf
+                </span>
+                <i class="fa-solid fa-angle-down"></i>
+            </span>
+        </div>
+        <div class="t">
+            <span>
+                sfdsfdf
+            </span>
+            <span>
+                sdfdsfdsf
+            </span>
+        </div>
+        <div class="m">
+            <span>
+                <i class="fa-solid fa-cart-shopping"></i>
+            </span>
+            <span>
+
+            </span>
+        </div>
+    </section>
+
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="index.css">
+
+
+    .Navbar {
+        display: grid;
+        grid-template-columns: 10% 10% 40% 10% 10% 10% 10%;
+        grid-auto-rows: minmax(60px, 60px);
+        width: 100%;
+        height: 60px;
+        background-color: #0f1111;
+        color: white;
+        position: sticky;
+        top: 0;
+    
+        .f {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            & img {
+                height: 60px;
+                object-fit: cover;
+            }
+            
+            & span {
+                color: white;
+            }
+        }
+    
+        .k {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+    
+            & i {
+                color: white;
+                padding-top: 5%;
+                padding-right:2%;
+            }
+    
+            .k-t {
+                display: flex;
+                flex-direction: column;
+                & span {
+                    color: white;
+                }
+            }
+        }
+    
+        .l {
+            
+        }
+    
+        .p {
+            
+        }
+    
+        .g {
+    
+        }
+    
+        .t {
+            
+        }
+    
+        .m {
+            
+        }
+    }
+
+    
+        
+    & > div {
+        box-shadow: 1px 3px 5px #000;
+        border-radius: 12px;
+    }

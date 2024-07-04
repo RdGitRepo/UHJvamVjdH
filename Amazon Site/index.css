@@ -1,0 +1,607 @@
+*, 
+*::before, 
+*::after{
+    box-sizing: border-box;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+    font-family: calibri;
+    background: #E3E6E6;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+.headNav{
+    background-color: #131a20;
+    display: flex;
+    gap: .5rem;
+    padding: .2rem 1rem .2rem .4rem;    
+
+    .lo{
+        display: flex;
+        gap: .5rem;
+
+        .logo{
+            & a{
+                display: inline-block;
+                height: 55px;
+                translate: 0 5%;
+
+                > :hover {
+                    border: 1px solid white;
+                }
+            }
+        }
+        .location{
+
+            > :hover {
+                border: 1px solid white;
+            }
+
+            & button{
+                height: 100%;
+                display: flex;
+                gap: .3rem;
+                padding: .5rem;
+                background-color: transparent;
+                color: white;
+                border: none;
+                
+                .lo-icon{
+                    & i{
+                        color: rgb(200, 200, 200);
+                        font-size: 15px;
+                        translate: 0 120%;
+                    }
+                }
+                .lo-info {
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    text-align: left;
+    
+                    .d{
+                        font-family: Arial, Helvetica, sans-serif;
+                        color: rgb(200, 200, 200);
+                    }
+                    .u{
+                        font-size: 15px;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+    .ser{
+        flex-grow: 1;
+        display: flex;
+        padding: .5rem;
+
+        & button{
+            border: none;
+            border-right: 1px solid rgba(128, 128, 128, 0.5);
+            padding: .5rem .8rem;
+            border-radius: .25rem 0 0 .25rem;
+        }
+        
+        & form{
+            display: flex;
+            flex-grow: 1;
+            background-color: white;
+            border-radius: 0 .25rem .25rem 0;
+            overflow: hidden;
+            & input, & button{
+                border: none;
+            }
+            & input{
+                padding-left: .5rem;
+                font-size: 15px;
+                flex-grow: 1;
+            }
+            & button{
+                background-color: #f1c40f;
+                padding: .5rem .8rem;
+                border-radius: 0 .25rem .25rem 0;
+                & i{
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+    .lor{
+        display: flex;
+        gap: .5rem;
+        color: white;
+
+        > :hover {
+            border: 1px solid white;
+        }
+
+        .lang, .log, .orders, .cart{
+            padding: .5rem;
+        }
+        .lang{
+            display: flex;
+            align-items: center;
+            & span{
+                font-size: 15px;
+            }
+        }
+        .log, .orders{
+            .s{
+                font-size: 14px;
+            }
+        }
+        .cart{
+            display: flex;
+            align-items: center;
+            & i{
+                font-size: 30px;
+            }
+            & span{
+                padding-left: .1rem;
+                translate: 0 35%;
+            }
+        }
+    }
+}
+
+.category {
+    display: flex;
+    gap: 1rem;
+    padding-inline: 40px;
+    background-color: #232f3e;
+    color: white;
+    align-items: center;
+    text-align: center;
+    font-size: 0.9rem;
+    height: 38.99px;
+
+    & > span {
+        padding-inline: 5px;
+    }
+
+    :first-child {
+
+        & i {
+            font-size: 1rem;
+        }
+    }
+}
+
+.maincontent {
+    margin-right: auto;
+    margin-left: auto;
+    border: 0;
+    width: 1480px;
+    align-self: center;
+    font-size: 0.5rem;
+    position: relative;
+
+    .boxleft {        
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 250px;
+        width: 80px;
+        font-size: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 10;
+
+        &:hover {
+            border: 2px solid lightblue;
+        } 
+    }
+
+    .boxright {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 250px;
+        width: 80px;
+        font-size: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 10;
+
+        &:hover {
+            border: 2px solid lightblue;
+        } 
+    }
+
+    .imagesliderbar {
+        display: flex;
+        width: 100%;
+        overflow: hidden;
+        
+        & img {
+            width: 100%;
+        }
+    }
+    .imagesliderbar.scroll{
+        scroll-behavior: smooth;
+    }
+
+    .fourimagecontainer {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        margin-top: -340px;
+        column-gap: 5px;
+        padding-inline: 10px;
+        position: relative;
+
+        .fourphocontent {
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            padding-block: 20px;
+            padding-inline: 20px;
+            width: 350px;
+            height: 420px;
+
+            .hed {
+                font-size: 1.5rem;
+                font-weight: 800;
+            }
+
+            .blocksfordis {
+                display: grid;
+                grid-template-columns: 50% 50%; 
+                column-gap: 10px;             
+                
+                .photofour {
+                    display: flex;
+                    flex-direction: column;
+                    font-size: 0.9rem;
+                    padding-block: 10px;  
+
+                    & img {
+                        height: 80%;
+                        padding-block: 5px;     
+                    }
+                }
+            }
+
+            .foot {
+                position: absolute;
+                bottom: 20px;
+                color: rgb(18, 170, 216);
+                font-size: 0.9rem;
+                text-decoration: none;
+            }
+        }
+
+        .signinsecurly {
+            width: 350px;
+            height: 150px;
+            padding-block: 20px;
+            padding-inline: 20px;
+            background-color: white;
+
+            .hed {
+                font-size: 1.5rem;
+                font-weight: 800;
+                padding-bottom: 20px;
+            }
+
+            & button {
+                width: 100%;
+                padding: 0.5rem 20px;
+                border-radius: 15px;
+                color: #4F440C;
+                background-color: #F7CA00;
+            }
+        }
+    }
+
+    .topdealsdiv {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        padding-block: 20px;
+        padding-inline: 20px;
+        margin-block: 2rem;
+        height: 285px;
+        position: relative;
+
+        .boxleft {        
+            position: absolute;
+            top: 110px;
+            left: 0;
+            height: 100px;
+            width: 45px;
+            font-size: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: transparent;
+            color: rgb(71, 70, 70);
+    
+            &:hover {
+                border: 2px solid lightblue;
+                background-color: white;
+                color: black;
+            } 
+        }
+    
+        .boxright {
+            position: absolute;
+            top: 110px;
+            right: 0;
+            height: 100px;
+            width: 45px;
+            font-size: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: transparent;
+            color: rgb(71, 70, 70);
+    
+            &:hover {
+                border: 2px solid lightblue;
+                background-color: white;
+                color: black;
+            } 
+        }
+    
+        .Heaingsfordiv {
+            display: flex;
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-block: 0.3rem;
+        }
+    
+        .topdealslider {
+            display: flex;
+            overflow-x: scroll;
+            overflow-y: hidden;
+        }
+
+        .topdealslider::-webkit-scrollbar {
+            width: 35px;
+            height: 12px;
+        }
+
+        .topdealslider::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 5px;
+        }
+
+        .topdealslider::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 10px;
+            width: 12px;
+        }
+
+        .topdealslider::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    }
+
+    .frt {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        margin-block: 2rem;
+        column-gap: 5px;
+        padding-inline: 10px;
+        position: relative;
+
+        .ftr-f {
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            padding-block: 20px;
+            padding-inline: 20px;
+            width: 350px;
+            height: 420px;
+
+            .hed {
+                font-size: 1.5rem;
+                font-weight: 800;
+            }
+
+            .blocksfordis {
+                display: grid;
+                grid-template-columns: 50% 50%; 
+                column-gap: 10px;             
+                
+                .photofour {
+                    display: flex;
+                    flex-direction: column;
+                    font-size: 0.9rem;
+                    padding-block: 10px;  
+
+                    & img {
+                        height: 80%;
+                        padding-block: 5px;     
+                    }
+                }
+            }
+
+            .foot {
+                position: absolute;
+                bottom: 20px;
+                color: rgb(18, 170, 216);
+                font-size: 0.9rem;
+                text-decoration: none;
+            }
+        }
+
+        .signinsecurly {
+            width: 350px;
+            height: 150px;
+            padding-block: 20px;
+            padding-inline: 20px;
+            background-color: white;
+
+            .hed {
+                font-size: 1.5rem;
+                font-weight: 800;
+                padding-bottom: 20px;
+            }
+
+            & button {
+                width: 100%;
+                padding: 0.5rem 20px;
+                border-radius: 15px;
+                color: #4F440C;
+                background-color: #F7CA00;
+            }
+        }
+    }
+
+    .bestsellerclothing {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        padding-block: 20px;
+        padding-inline: 20px;
+        height: 285px;
+        margin-block: 2rem;
+        position: relative;
+
+        .boxleft {        
+            position: absolute;
+            top: 110px;
+            left: 0;
+            height: 100px;
+            width: 45px;
+            font-size: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: transparent;
+            color: rgb(71, 70, 70);
+    
+            &:hover {
+                border: 2px solid lightblue;
+                background-color: white;
+                color: black;
+            } 
+        }
+    
+        .boxright {
+            position: absolute;
+            top: 110px;
+            right: 0;
+            height: 100px;
+            width: 45px;
+            font-size: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: transparent;
+            color: rgb(71, 70, 70);
+    
+            &:hover {
+                border: 2px solid lightblue;
+                background-color: white;
+                color: black;
+            } 
+        }
+    
+        .Heaingsfordiv {
+            display: flex;
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-block: 0.3rem;
+        }
+    
+        .bestsellerclothingslider {
+            display: flex;
+            overflow: hidden;            
+        }
+    }
+}
+
+.signintab {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 0.9rem;
+    padding-block: 10px;
+    margin-block: 10px;
+    border-block: 1px solid black;
+
+    & button {
+        margin-block: 5px;
+        margin-right: auto;
+        margin-left: auto;
+        width: 250px;
+        padding: 0.3rem 20px;
+        border-radius: 5px;
+        color: #4F440C;
+        background-color: #F7CA00;
+    }
+}
+
+.backtotop {
+    text-align: center;
+    position: relative;
+    height: 50px;
+    background-color: #37475A;
+    color: white;
+
+    & span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -5px 0 0 -50px;
+    }
+}
+
+.footer {
+    background-color: #232F3E;
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+
+    .footercon {
+        margin-left: 20%;
+        margin-right: 20%;
+        color: white;
+        width: 1000;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 100px;
+        justify-content: center;
+
+        .footerlinks {
+            display: flex;
+            flex-direction: column;
+            padding-inline: 5px;
+            font-size: 1rem;
+
+            .hed {
+                font-size: 1.2rem;
+                font-weight: 800;
+            }
+            
+            & a {
+                color: white;
+                text-decoration: none;
+                padding-bottom: 8px;
+            }
+        }
+    }
+}
+
+.langwithlogo {
+    background-color: #131A22;
+    text-align: center;
+    position: relative;
+    height: 50px;
+    color: white;
+
+    & span {
+        position: absolute;
+        top: 40%;
+        left: 44%;
+        margin: -5px 0 0 -50px;
+    }
+}
